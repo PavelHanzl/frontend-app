@@ -35,7 +35,6 @@ function DataList() {
     const getCurrentDateTime = () => moment(); // Aktuální datum a čas
 
     return (
-
         <div>
             <div className="row">
                 <div className="col-sm ">
@@ -89,8 +88,7 @@ function DataList() {
                 <tbody>
                 {data
                     .filter((item) => item.usedMemory < threshold && getCurrentDateTime().diff(moment(item.createdAt), 'minutes') <= minutesFilter) // Filtrování za posledních X minut
-                    .map((item, index) => (
-                        <tr key={index}>
+                    .map((item, index) => (<tr key={index}>
                             <td className="align-middle">{item.id}</td>
                             <td className="align-middle">{item.clientName.clientName}</td>
                             <td className="align-middle">{item.usedMemory} MB</td>
@@ -107,8 +105,7 @@ function DataList() {
                                 </div>
                             </td>
                             {/* Formátování data a času */}
-                        </tr>
-                    ))}
+                        </tr>))}
                 </tbody>
             </table>
             <div className="alert alert-warning" role="alert">
@@ -123,8 +120,7 @@ function DataList() {
 
                 In the case of google chrome browser at chrome://flags/#allow-insecure-localhost<br/>
             </div>
-        </div>
-    );
+        </div>);
 }
 
 export default DataList;
