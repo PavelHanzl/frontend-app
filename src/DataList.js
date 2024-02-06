@@ -51,6 +51,7 @@ function DataList() {
                             placeholder="Enter email"
                             value={threshold}
                             onChange={handleThresholdChange}
+                            min="0"
                         />
                         <small id="thresholdInputHelp" className="form-text text-muted">Filters data with value less
                             than specified.</small>
@@ -67,6 +68,7 @@ function DataList() {
                             placeholder="Enter minutes"
                             value={minutesFilter}
                             onChange={handleMinutesFilterChange}
+                            min="1"
                         />
                         <small id="minutesFilterInputHelp" className="form-text text-muted">Filter data for the
                             last {minutesFilter} minutes.</small>
@@ -114,7 +116,7 @@ function DataList() {
                 can retrieve data from the server. <br/><br/>
 
                 You can set this up locally only for this application <a
-                href="https://localhost:443/api/data" target="_blank">here</a><br/><br/>
+                href="https://localhost:443/api/data" target="_blank" rel="noreferrer">here</a><br/><br/>
 
                 Or globally enable invalid certificates for resources retrieved from localhost for your
                 browser.<br/><br/>
