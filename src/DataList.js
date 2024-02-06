@@ -109,6 +109,18 @@ function DataList() {
                     ))}
                 </tbody>
             </table>
+            <div className="alert alert-warning" role="alert">
+                Note that you should first enable the use of a self-signed certificate for this application so that it
+                can retrieve data from the server. <br/><br/>
+
+                You can set this up locally only for this application <a
+                href="https://localhost:443/api/data" target="_blank">here</a><br/><br/>
+
+                Or globally enable invalid certificates for resources retrieved from localhost for your
+                browser.<br/><br/>
+
+                In the case of google chrome browser at chrome://flags/#allow-insecure-localhost<br/>
+            </div>
         </div>
     );
 }
