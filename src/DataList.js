@@ -7,7 +7,7 @@ function DataList() {
     useEffect(() => {
         // Funkce pro načtení dat
         const fetchData = () => {
-            fetch('http://localhost:8080/api/data')
+            fetch('https://localhost:443/api/data')
                 .then(response => response.json())
                 .then(data => setData(data))
                 .catch(error => console.error('Error:', error));
