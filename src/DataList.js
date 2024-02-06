@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import moment from 'moment'; // Importujte knihovnu moment
 
 function DataList() {
@@ -37,38 +37,40 @@ function DataList() {
     return (
 
         <div>
-            <div class="row">
-                <div class="col-sm ">
+            <div className="row">
+                <div className="col-sm ">
 
 
-            <div className="form-group w-50 p-3 float-end">
-                <label htmlFor="thresholdInput">Set maximum of used memory</label>
-                <input
-                    type="number"
-                    className="form-control"
-                    id="thresholdInput"
-                    aria-describedby="thresholdInputHelp"
-                    placeholder="Enter email"
-                    value={threshold}
-                    onChange={handleThresholdChange}
-                />
-                <small id="thresholdInputHelp" className="form-text text-muted">Filters data with value less than specified.</small>
-            </div>
+                    <div className="form-group w-50 p-3 float-end">
+                        <label htmlFor="thresholdInput">Set maximum of used memory</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            id="thresholdInput"
+                            aria-describedby="thresholdInputHelp"
+                            placeholder="Enter email"
+                            value={threshold}
+                            onChange={handleThresholdChange}
+                        />
+                        <small id="thresholdInputHelp" className="form-text text-muted">Filters data with value less
+                            than specified.</small>
+                    </div>
                 </div>
-                <div class="col-sm">
-            <div className="form-group w-50 p-3 float-start">
-                <label htmlFor="minutesFilterInput">Set time filter (minutes)</label>
-                <input
-                    type="number"
-                    className="form-control"
-                    id="minutesFilterInput"
-                    aria-describedby="minutesFilterInputHelp"
-                    placeholder="Enter minutes"
-                    value={minutesFilter}
-                    onChange={handleMinutesFilterChange}
-                />
-                <small id="minutesFilterInputHelp" className="form-text text-muted">Filter data for the last {minutesFilter} minutes.</small>
-            </div>
+                <div className="col-sm">
+                    <div className="form-group w-50 p-3 float-start">
+                        <label htmlFor="minutesFilterInput">Set time filter (minutes)</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            id="minutesFilterInput"
+                            aria-describedby="minutesFilterInputHelp"
+                            placeholder="Enter minutes"
+                            value={minutesFilter}
+                            onChange={handleMinutesFilterChange}
+                        />
+                        <small id="minutesFilterInputHelp" className="form-text text-muted">Filter data for the
+                            last {minutesFilter} minutes.</small>
+                    </div>
                 </div>
             </div>
             <table className="table">
